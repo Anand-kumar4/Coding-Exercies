@@ -1,0 +1,10 @@
+ORACLE
+
+select distinct city from station where SUBSTR(CITY,-1,1) in ('a','e','i','o','u') and SUBSTR(LOWER(CITY),1,1) in ('a','e','i','o','u');
+
+
+MYSQL
+
+select distinct city from station 
+where left(city,1) in ('a','e','i','o','u') 
+and right(city, 1) in ('a','e','i','o','u')

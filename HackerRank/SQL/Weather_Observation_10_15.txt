@@ -1,0 +1,8 @@
+ORACLE
+
+Select distinct CITY from STATION where lower(substr(city,length(city),1)) not in ('a','e','i','o','u');
+
+
+MYSQL
+
+select DISTINCT city from STATION where city NOT REGEXP '[aeiou]$'
